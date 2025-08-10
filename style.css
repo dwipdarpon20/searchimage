@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: linear-gradient(135deg, #283a49, #2b9499);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*  This is for header section  */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    padding: 2rem;
+    font-size: 3rem;
+    color: rgb(199, 201, 203);
+}
+input {
+    height: 55px;
+    width: 300px;
+    background-color: rgb(205, 204, 204);
+    border: 0.5px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-right: 3rem ;
+    font-size: 18px;
+    padding: 20px;
+}
+::placeholder {
+    padding: 20px;
+    font-size: 18px;
+    color: rgb(44, 43, 43);
+}
+input:hover {
+    transform: scale(1.1);
+}
+
+/* This is for button  */
+button {
+    font-size: 18px;
+    color: rgb(44, 43, 43);
+    height: 55px;
+    width: 100px;
+    background-color: rgb(205, 204, 204);
+    border: 0.5px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.1);
+    background-color: rgb(151, 192, 89);
+}
+
+/* This is for the cards */
+
+img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    height: 450px;
+    width: 400px;
+    background: linear-gradient(145deg, #cfd8df, #b0bcc7);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+    transform: scale(1.02);
+}
+
+/* All card parents  */
+.cardHolder {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    flex-direction: row;
+    gap: 40px;
+    padding: 20px;
+}
+
+.btn {
+    display: flex;
+    gap: 25px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    /* Tablet view */
+    input {
+        width: 250px;
+        margin-right: 1rem;
+    }
+
+    .card {
+        width: 320px;
+        height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Large Mobile View */
+    h2 {
+        font-size: 2.2rem;
+        padding: 1.5rem;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input {
+        width: 90%;
+        margin: 0;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small Mobile View */
+    h2 {
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+
+    input, button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .cardHolder {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
