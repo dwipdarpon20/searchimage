@@ -153,17 +153,40 @@ img {
         height: auto;
     }
 }
-
 @media (max-width: 480px) {
     /* Small Mobile View */
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         padding: 1rem;
+        max-width: 300px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
-    input, button {
-        width: 100%;
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; 
+    }
+
+    input {
+        width: 90%;
         font-size: 16px;
+        border-radius: 10px;
+    }
+    ::placeholder{
+        padding: 0;
+    }
+
+    .btn {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
     }
 
     .cardHolder {
